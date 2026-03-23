@@ -8,86 +8,91 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <button id="themeToggle" type="button">Змінити тему</button>
 
-<div class="resume-wrapper">
-    <aside class="left-panel">
-        <div class="photo-container">
-            <img src="IMG_8338.HEIC" alt="Діана Дяковська Фото">
-        </div>
-        
-        <div class="sidebar-block">
-            <h2>Контакти</h2>
-            <p>📍 Львів, Україна</p>
-            <p>📧 diana@example.com</p>
-            <p>📞 +380 12 345 67 89</p>
-        </div>
-
-        <div class="sidebar-block">
-            <h2>Навички</h2>
-            <ul class="skills">
-                <li>Python</li>
-                <li>C#</li>
-                <li>HTML / CSS</li>
-                <li>UI/UX Design</li>
-                <li>Cybersecurity</li>
-            </ul>
-        </div>
-    </aside>
-
-    <main class="right-panel">
-        <header>
-            <h1>Діана Дяковська</h1>
-            <p class="role">Студентка КБ-204 | Кібербезпека</p>
-        </header>
-
-        <section>
-            <h2>Про мене</h2>
-            <p>Студентка спеціальності "Кібербезпека" у Національному університеті "Львівська політехніка". Зацікавлена у сфері інформаційної безпеки та розробки інтерфейсів.</p>
-        </section>
-
-        <section>
-            <h2>Освіта</h2>
-            <div class="entry">
-                <h3>Національний університет "Львівська політехніка"</h3>
-                <span class="period">2024 - 2028</span>
-                <p>Бакалавр, Кібербезпека та захист інформації</p>
+    <div class="resume-wrapper">
+        <aside class="left-panel">
+            <div class="photo-container">
+                <img src="МОЄ ФОТО.jpg" alt="Діана Дяковська Фото">
             </div>
-        </section>
 
-        <section>
-            <h2>Курси</h2>
-            <ul class="custom-list">
-                <li><strong>GoIT:</strong> Fullstack Development & UI/UX Design</li>
-                <li><strong>Genius.Space:</strong> HTML&CSS розробка</li>
-                <li><strong>Alpaka.School:</strong> UI/UX дизайн</li>
-                <li><strong>Prometeus:</strong> Інформаційна безпека під час війни: практичний курс</li>
-            </ul>
-        </section>
+            <div class="sidebar-block">
+                <h2>Контакти</h2>
+                <p>📍 Львів, Україна</p>
+                <p>📧 diana@example.com</p>
+                <p>📞 +380 12 345 67 89</p>
+            </div>
 
-        <section>
-            <h2>Досвід роботи</h2>
-            <p>Навчальні та фріланс-проекти у сфері дизайну та програмування.</p>
-        </section>
-    </main>
-</div>
+            <div class="sidebar-block">
+                <h2>Навички</h2>
+                <ul class="skills">
+                    <li>Python</li>
+                    <li>C#</li>
+                    <li>HTML / CSS</li>
+                    <li>UI/UX Design</li>
+                    <li>Cybersecurity</li>
+                </ul>
+            </div>
+        </aside>
 
-</body>
-<footer id="footer"></footer>
+        <main class="right-panel">
+            <header>
+                <h1>Діана Дяковська</h1>
+                <p class="role">Студентка КБ-204 | Кібербезпека</p>
+            </header>
 
-<div id="modal" class="modal">
-    <div class="modal-content">
-        <form action="https://formspree.io/f/mnqekzrn" method="POST">
-            <h2>Зворотній зв'язок</h2>
-            <input type="text" name="name" placeholder="Ім’я" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="tel" name="phone" placeholder="Телефон" required>
-            <textarea name="message" placeholder="Ваше повідомлення" required></textarea>
-            <button type="submit">Відправити</button>
-        </form>
+            <section>
+                <h2>Про мене</h2>
+                <p>Студентка спеціальності "Кібербезпека" у Національному університеті "Львівська політехніка". Зацікавлена у сфері інформаційної безпеки та розробки інтерфейсів.</p>
+            </section>
+
+            <section>
+                <h2>Освіта</h2>
+                <div class="entry">
+                    <h3>Національний університет "Львівська політехніка"</h3>
+                    <span class="period">2024 - 2028</span>
+                    <p>Бакалавр, Кібербезпека та захист інформації</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Курси</h2>
+                <ul class="custom-list">
+                    <li><strong>GoIT:</strong> Fullstack Development & UI/UX Design</li>
+                    <li><strong>Genius.Space:</strong> HTML&amp;CSS розробка</li>
+                    <li><strong>Alpaka.School:</strong> UI/UX дизайн</li>
+                    <li><strong>Prometeus:</strong> Інформаційна безпека під час війни: практичний курс</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Досвід роботи</h2>
+                <p>Навчальні та фріланс-проекти у сфері дизайну та програмування.</p>
+            </section>
+
+            <section class="comments-section">
+                <h2>Коментарі попередніх роботодавців</h2>
+                <div id="commentsList"></div>
+            </section>
+        </main>
     </div>
-</div>
 
-<button id="themeToggle">Змінити тему</button>
+    <footer id="footer"></footer>
 
-<script src="script.js"></script>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button id="closeModal" class="close-modal" type="button">&times;</button>
+            <form action="https://formspree.io/f/xyknrkow" method="POST">
+                <h2>Зворотній зв'язок</h2>
+                <input type="text" name="name" placeholder="Ім’я" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone" placeholder="Телефон" required>
+                <textarea name="message" placeholder="Ваше повідомлення" required></textarea>
+                <button type="submit">Відправити</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
