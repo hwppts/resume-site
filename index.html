@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <button id="themeToggle" type="button">Змінити тему</button>
 
     <div class="resume-wrapper">
         <aside class="left-panel">
@@ -68,7 +69,41 @@
                 <h2>Досвід роботи</h2>
                 <p>Навчальні та фріланс-проекти у сфері дизайну та програмування.</p>
             </section>
+
+            <section>
+                <h2>Коментарі попередніх роботодавців</h2>
+                <div id="commentsList"></div>
+            </section>
         </main>
     </div>
+
+    <footer id="footer">
+        <h2>Дані localStorage</h2>
+        <ul id="storage-list"></ul>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button id="closeModal" type="button">×</button>
+            <h2>Форма зворотного зв'язку</h2>
+            <form action="https://formspree.io/f/mjgpogvb" method="POST">
+                <label for="name">Ім'я</label>
+                <input id="name" type="text" name="name" required>
+
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" required>
+
+                <label for="phone">Номер телефону</label>
+                <input id="phone" type="tel" name="phone" required>
+
+                <label for="message">Повідомлення</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Відправити</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
