@@ -86,21 +86,22 @@
         <div class="modal-content">
             <button id="closeModal" type="button">×</button>
             <h2>Форма зворотного зв'язку</h2>
-            <form action="https://formspree.io/f/mjgpogvb" method="POST">
-                <label for="name">Ім'я</label>
-                <input id="name" type="text" name="name" required>
+            <form id="contact-form">
+    <label for="name">Ім'я</label>
+    <input id="name" type="text" name="name" required minlength="2" maxlength="100">
 
-                <label for="email">Email</label>
-                <input id="email" type="email" name="email" required>
+    <label for="email">Email</label>
+    <input id="email" type="email" name="email" required>
 
-                <label for="phone">Номер телефону</label>
-                <input id="phone" type="tel" name="phone" required>
+    <label for="subject">Тема</label>
+    <input id="subject" type="text" name="subject" required minlength="3" maxlength="150">
 
-                <label for="message">Повідомлення</label>
-                <textarea id="message" name="message" required></textarea>
+    <label for="message">Повідомлення</label>
+    <textarea id="message" name="message" required minlength="10" maxlength="2000"></textarea>
 
-                <button type="submit">Відправити</button>
-            </form>
+    <button type="submit">Відправити</button>
+    <p id="form-status"></p>
+</form>
         </div>
     </div>
 

@@ -88,3 +88,50 @@ applyThemeByTime();
 themeToggle.addEventListener("click", () => {
     document.body.classList.toggle("dark");
 });
+
+const contactForm = document.getElementById("contact-form");
+const formStatus = document.getElementById("form-status");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const formData = {
+            name: contactForm.name.value.trim(),
+            email: contactForm.email.value.trim(),
+            subject: contactForm.subject.value.trim(),
+            message: contactForm.message.value.trim()
+        };
+
+        if (formStatus) {
+            formStatus.textContent = "Надсилання...";
+        }
+
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                if (formStatus) {
+                    formStatus.textContent = result.message || "Повідомлення успішно надіслано.";
+                }
+                contactForm.reset();
+            } else {
+                if (formStatus) {
+                    formStatus.textContent = result.message || "Сталася помилка.";
+                }
+            }
+        } catch (error) {
+            if (formStatus) {
+                formStatus.textContent = "Не вдалося підключитися до сервера.";
+            }
+        }
+    });
+}

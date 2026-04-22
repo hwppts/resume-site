@@ -1,0 +1,14 @@
+{
+  "name": "lab6-variant11",
+  "version": "1.0.0",
+  "description": "Лабораторна робота №6",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^21.4.0",
+    "@hapi/inert": "^7.1.0",
+    "dotenv": "^16.4.5"
+  }
+}
